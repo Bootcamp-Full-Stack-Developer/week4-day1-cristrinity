@@ -7,26 +7,45 @@
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans:100,300,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
 
   <article class="bootcamp">
     <div class="container">
-      <header class="bootcamp__header">
-        <a href="#">
-          <h1 class="bootcamp__heading">Bootcamp 2019</h1>
+        <header class="bootcamp__header">
+         <div class="fondo">
+            <span class="bootcamp__bgi-container">
+              <img class="bootcamp__bgi-img" src="img/fondo.jpg">
+            </span>
+         </div>
+         <div class="bootcamp__section-main">
+          <a href="#">
+          <h1 class="bootcamp__heading">
+            <span class="icon-logo">
+            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="#FFF" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20zM7.222 21.31l16.618.004c.04-.002.082-.004.124-.004 1.022 0 1.851.81 1.851 1.81s-.829 1.811-1.851 1.811c-.042 0-.083-.001-.124.032l-6.913-.032-2.469.026a2.673 2.673 0 0 0-.37-.026c-1.432 0-2.592 1.135-2.592 2.535 0 1.4 1.16 2.534 2.592 2.534.126 0 .25-.009.37 0l10.37-.025c3.46-.283 6.172-2.92 6.172-6.13 0-1.906-.955-3.61-2.456-4.739a6.049 6.049 0 0 0 1.468-3.95c0-3.36-2.752-6.09-6.172-6.156l-8.888.013A2.297 2.297 0 0 0 14.705 9c-1.227 0-2.222.973-2.222 2.172 0 1.2.995 2.173 2.222 2.173.084 0 .166-.005.247 0l8.888.004c.965.062 1.728.847 1.728 1.806 0 .96-.763 1.744-1.728 1.81H7.222c-1.227 0-2.222.973-2.222 2.173 0 1.2.995 2.172 2.222 2.172z"/></svg>
+            </span>
+          Bootcamp
+          <span class="bootcamp__heading--additional">   2019</span></h1>
           <p class="bootcamp__sub-heading">Bootcamp Full Stack Developer Avanzado</p>
         </a>
         <ul class="bootcamp__metainfo">
-          <li aria-label="Fecha de inicio">2 <abbr title="Abril">Abr</abb> 2019</li>
-          <li aria-label="Asistencia">Presencial</li>
-          <li aria-label="Dónde">Madrid</li>
+         <li aria-label="Fecha de inicio"> <i class="fa fa-calendar-alt"></i> <abbr title="Abril">2 Abr</abb> 2019</li>
+           <li aria-label="Asistencia"><i class="fa fa-chair"></i>Presencial</li>
+         <li aria-label="Dónde"> <i class="fa fa-map-marked-alt"> </i>Madrid</li>
         </ul>
         <p class="bootcamp__lead">Learn by doing: 4 meses de formación en proyectos reales en un entorno de trabajo exigente</p>
+      </div> 
       </header>
-      <p>Un curso intensivo presencial en Madrid, que te permitirá tener acceso al mercado de las empresas tecnológicas y startups, en tan <strong>solo 4 meses</strong>. Aprenderás tecnologías front-end y back-end basadas en Javascript: Angular, NodeJS&hellip; y las aplicarás a proyectos reales.</p>
-      <button type="button">Más información sobre el Bootcamp</button>
+      <main class="container bootcamp__main">
+      <div class="bootcamp__heading--style2">
+          Fullstack Development Avanzado
+      </div>
+      <p class="bootcamp__main-p">Un curso intensivo presencial en Madrid, que te permitirá tener acceso al mercado de las empresas tecnológicas y startups, en tan <strong>solo 4 meses</strong>. Aprenderás tecnologías front-end y back-end basadas en Javascript: Angular, NodeJS&hellip; y las aplicarás a proyectos reales.</p>
+      <button type="button" class="bootcamp__button">Más información</button>
 
       <form action="" class="subscription">
         <div class="form-group">
@@ -36,9 +55,9 @@
     </div>
   </article>
 
-  <p>Para optimizasr el SVG usamos:
+   <!--<p>Para optimizasr el SVG usamos:
     <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a>
-  </p>
-  
+  </p>-->
+</main>
 </body>
 </html>
