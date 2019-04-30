@@ -1,159 +1,266 @@
-* {box-sizing: border-box}
+* {
+    box-sizing: border-box
+}
 
 /* ----------------------------------------
    RESET
 ---------------------------------------- */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   font-size: 100%;
-   font: inherit;
-   vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* Iniciación de la propiedad "display" para etiquetas de HTML5 para navegadores antiguos */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-   display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-   line-height: 1.4;
-   font-family: 'Encode Sans', sans-serif;
-   font-weight: 100;
+    line-height: 1.4;
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 100;
 }
-a, :focus {
+
+a,
+:focus {
     text-decoration: none;
     outline: none;
     cursor: pointer;
 }
-ol, ul {
-   list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-   quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-   content: '';
-   content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-   border-collapse: collapse;
-   border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
+/*
+-----------------  
+container
+-----------------
+*/
 .container {
-width: 1024px;
-    /*overflow: hidden;*/
+    max-width: 1024px;
+    padding: 88px 88px;
+    margin: 0 auto;
 }
 
-.bootcamp{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.bootcamp__section-main{
-padding: 50px 80px;
-max-width: 916px;
+@media (max-width: 767px) {
+    .container {
+        padding: 28px 28px;
+        position: relative;
+    }
 }
 
-.bootcamp__header {
-    overflow: hidden;
-   /* height: 754px;*/
+/*
+-----------------  
+bootcamp
+-----------------
+*/
+.bootcamp {
+    background-image: url("../img/bg-header.jpg");
+    /* background-size: cover;
+    height: 750px;*/
+    background-position: 32% 100%;
+    max-height: 940px;
+}
+
+.bootcamp::before {
+    content: "";
+    background-color: #fff;
+    background-clip: padding-box;
+    border-top: 40px solid rgba(255, 255, 255, .5);
+    transform: skewY(11deg);
     width: 100%;
- }
- .bootcamp__heading{
-     font-size: 36px;
-     color: #fff;
+    height: 480px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 600px;
+}
+
+.bootcamp__heading {
+    font-size: 36px;
+    color: #fff;
     font-weight: 100;
     display: flex;
     justify-content: flex-start;
     align-items: center;
- }
- .bootcamp__sub-heading{
-     font-size: 26px;
-     color: #9de7ac;
-     font-weight: 100;
-     padding-top: 20px;
- }
- .bootcamp__heading--additional{
-     font-size: 23px;
-     padding-left: 11px;
-     padding-top: 8px;
- }
- .bootcamp__heading--additional::before{
+}
+
+.bootcamp__sub-heading {
+    font-size: 26px;
+    color: #9de7ac;
+    font-weight: 100;
+    padding-top: 20px;
+}
+
+.bootcamp__heading--additional {
+    font-size: 25px;
+    padding-left: 15px;
+    padding-top: 8px;
+}
+
+.bootcamp__heading--additional::before {
     content: "|";
     font-size: 23px;
     padding-right: 15px;
 }
-.bootcamp__metainfo{
-    padding-top: 58px;
+
+.bootcamp__metainfo {
+    padding-top: 48px;
     color: #fff;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-i::before{
+
+i::before {
     content: "";
     border-bottom: 1px solid #fff;
-    padding: 10px 20px;
+    padding: 12px 20px;
 }
-.fa{
-    padding-bottom: 15px;
+
+.fa {
+    padding-bottom: 20px;
     font-size: 26px;
 }
-.fa-calendar{
+
+.fa-calendar {
     position: relative;
     width: 20px;
     height: 20px;
 }
+
 li {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 14px;
+    padding-top: 11px;
 }
-li + li {
+
+li+li {
     padding-left: 84px;
 }
-.icon-logo{
+
+.icon-logo {
     width: 40px;
     height: 40px;
     margin-right: 10px;
-}
- .fondo{
-    transform: skewY(11deg);
-    overflow: hidden;
-    height: 90%;
-    width: 1024px;
-    margin-top: -200px;
-    position: absolute;
-    z-index: -1;
-    border-bottom: 35px solid rgba(101, 114, 199, 0.5);
-}
-
-.bootcamp__bgi-container{
-    overflow: hidden;
-    transform: skewY(11deg);
-
-}
-.bootcamp__bgi-img{
-    margin-top: -121px;
 }
 
 .bootcamp__lead {
@@ -161,31 +268,31 @@ li + li {
     color: #fff;
     padding-top: 35px;
     font-weight: 100;
+    max-width: 700px;
 }
-main{
-    position: absolute;
 
-}
-.bootcamp__heading--style2{
-    font-size: 26px;
+.bootcamp__heading--style2 {
+    font-size: 25px;
     color: #5db250;
     font-weight: 100;
     position: relative;
     margin-top: -111px;
 }
-.bootcamp__main{
-    padding: 50px 80px;
-    margin-top: 204px;
+
+.bootcamp__main {
+    margin-top: 304px;
     max-width: 750px;
 }
 
-.bootcamp__main-p{
+.bootcamp__main-p {
     font-size: 16px;
     color: #323232;
     padding-top: 15px;
     line-height: 1.8;
+    position: relative;
 }
-.bootcamp__button{
+
+.bootcamp__button {
     font-weight: 100;
     color: #8c40a3;
     border: 1px solid #8c40a3;
@@ -195,62 +302,94 @@ main{
     padding: 10px;
     width: 213px;
     margin-top: 25px;
+    position: relative;
 }
- 
-@media (max-width: 767px){
-    .container{
-        width: 100vw;
+
+@media (min-width: 768px) {
+    .bootcamp::before {
+        top: 560px;
     }
+
+    .bootcamp__main {
+        margin-top: 320px;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 767px) {
     .bootcamp {
-        display: inline;
+        height: none;
+        background-position: 29% 73%;
+        background-image: url("../img/bg-header.jpg") no-repeat;
+
     }
-    .bootcamp__sub-heading{
+
+    .bootcamp::before {
+        top: 487px;
+        border-top: 30px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .bootcamp__sub-heading {
         font-size: 18px;
     }
-    .bootcamp__section-main{
-        padding: 50px 12px 30px 20px;
+
+    .bootcamp__heading {
+        font-size: 30px;
     }
-    .fondo{
-        width: 100%;
-    }
-    .bootcamp__bgi-img{
-        margin-top: 50px;
-        margin-left: -392px;
-    }
-    li{
+
+    li {
         display: inline-flex;
         justify-content: flex-start;
-        flex-direction: initial;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 10px;
     }
-    .bootcamp__metainfo{
+
+    .bootcamp__metainfo {
         display: inline-flex;
         flex-direction: column;
+        align-content: center;
+        padding-top: 28px;
     }
-    li + li {
+
+    li+li {
         padding-left: 0px;
         flex-wrap: nowrap;
     }
-    .bootcamp__lead{
-        font-size: 20px
+
+    .bootcamp__lead {
+        font-size: 20px;
+        padding-top: 25px;
     }
+
     .bootcamp__main {
-        padding: 25px 20px;
+        padding: 25px 0;
+        margin-top: 230px;
     }
-    .bootcamp__heading--additional::before{
+
+    .bootcamp__heading--additional::before {
         padding-right: 5px;
     }
-    .bootcamp__button{
-        width: 100%
+
+    .bootcamp__button {
+        width: 100%;
     }
-    i::before{
+
+    i::before {
         border: 0;
-        padding: 10px 15px 5px 10px;
+        padding: 10px 15px 5px 0px;
     }
-    .fa-map-marked-alt{
+
+    .fa {
+        padding-bottom: 0;
+    }
+
+    .fa-map-marked-alt {
         font-size: 22px;
-        margin-left: -15px; 
+        margin-left: -15px;
     }
-    li + li {
+
+    li+li {
         padding-left: 0px;
     }
 }
